@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech With Chirath</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+/* DARK MODE */
+body {
+  background: #111;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #000;
+}
+
+nav h1 {
+  color: red;
+}
+
+nav button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h2 {
+  font-size: 30px;
+}
+
+/* VIDEO GRID (YouTube Style) */
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.video {
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.video:hover {
+  transform: scale(1.05);
+}
+
+/* LOGIN BOX */
+.login-box {
+  width: 300px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-box button {
+  padding: 10px;
+  width: 100%;
+  background: red;
+  color: white;
+  border: none;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+  .hero h2 {
+    font-size: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h1>Tech With Chirath</h1>
+  <button onclick="toggleDark()">Toggle Mode</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Welcome to My Tech Channel</h2>
+  <p>Gadgets | Tutorials | Reviews</p>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos">
+  <div class="video">
+    <h3>Video 1</h3>
+    <p>Tech review video</p>
+  </div>
+
+  <div class="video">
+    <h3>Video 2</h3>
+    <p>How to create website</p>
+  </div>
+
+  <div class="video">
+    <h3>Video 3</h3>
+    <p>Best apps 2026</p>
+  </div>
+</section>
+
+<!-- LOGIN -->
+<div class="login-box">
+  <h3>Login</h3>
+  <input type="text" placeholder="Username">
+  <input type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+function toggleDark() {
+  document.body.style.background =
+    document.body.style.background === "white" ? "#111" : "white";
+}
+
+function login() {
+  alert("Login feature coming soon!");
+}
+</script>
+
+</body>
+</html>
+```
